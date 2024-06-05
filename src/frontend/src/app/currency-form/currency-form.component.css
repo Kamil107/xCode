@@ -1,0 +1,26 @@
+.currency-form {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  width: 50%;
+  margin: 50px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.currency-form h2 {
+  text-align: center;
+}
+
+.currency-form form div {
+  margin-bottom: 10px;
+}
+
+.currency-form input, .currency-form button {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.response {
+  text-align: center;
+}
