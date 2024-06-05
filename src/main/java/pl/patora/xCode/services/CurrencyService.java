@@ -3,7 +3,6 @@ package pl.patora.xCode.services;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestClient;
 import pl.patora.xCode.dto.NbpRateResponse;
 import pl.patora.xCode.dto.Rate;
@@ -11,7 +10,6 @@ import pl.patora.xCode.exceptions.CurrencyNotFoundException;
 import pl.patora.xCode.exceptions.ServiceException;
 
 @Service
-@Transactional
 public class CurrencyService
 {
     public static final String LOCAL_HOST = "http://localhost:8080";
