@@ -3,6 +3,7 @@ import {DatePipe, NgForOf} from "@angular/common";
 import {CurrencyService} from "../services/currency-service";
 import {EventBusService} from "../event-bus/event-bus";
 import {Subscription} from "rxjs";
+import {AuditDto} from "../interfaces/AuditDto";
 
 @Component({
   selector: 'currency-list',
@@ -37,7 +38,7 @@ import {Subscription} from "rxjs";
   styleUrls: ['./currency-list.component.css']
 })
 export class CurrencyListComponent implements OnInit, OnDestroy {
-  currencyRequests: any[] = [];
+  currencyRequests: AuditDto[] = [];
   private eventsSubscription: Subscription | null = null;
 
   constructor(private currencyService: CurrencyService, private eventBus: EventBusService) {

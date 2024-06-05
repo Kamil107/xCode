@@ -1,8 +1,10 @@
 import {Component} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {RouterOutlet} from "@angular/router";
-import {CurrencyRequest, CurrencyService, RateValue} from "../services/currency-service";
+import {CurrencyService} from "../services/currency-service";
 import {EventBusService} from "../event-bus/event-bus";
+import {CurrencyRequest} from "../interfaces/CurrencyRequest";
+import {RateValue} from "../interfaces/RateValue";
 
 @Component({
   selector: 'currency-form',

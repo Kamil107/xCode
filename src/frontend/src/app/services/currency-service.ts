@@ -1,5 +1,8 @@
 import {Injectable} from '@angular/core';
 import axios from 'axios';
+import {AuditDto} from "../interfaces/AuditDto";
+import {CurrencyRequest} from "../interfaces/CurrencyRequest";
+import {RateValue} from "../interfaces/RateValue";
 
 @Injectable({
   providedIn: 'root'
@@ -21,22 +24,4 @@ export class CurrencyService {
   async getAllRequests(): Promise<Array<AuditDto>> {
     return (await axios.get('/api/currencies/requests')).data;
   }
-}
-
-
-export interface CurrencyRequest {
-  currencyCode: String
-  name: String
-}
-
-export interface RateValue {
-  value: number
-}
-
-export interface AuditDto {
-  currency: string
-  name: string
-  dateTime: string
-  value: number
-  success: boolean
 }
